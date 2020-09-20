@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if path %}
+    <table>
+        <tr>
+            <th>Images</th>
+            <th>Download</th>
+        </tr>
+        {% for i in path %}
+            <tr>
+                <td>{{ i }}</td>
+                <td><a href="/download/{{ i }}">download</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+</body>
+</html>
